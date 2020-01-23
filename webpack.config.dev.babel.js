@@ -38,6 +38,11 @@ export default webpackMerge(baseConfig, {
     inline: true,
 
     disableHostCheck: true,
+
+    overlay: {
+      warnings: false,
+      errors: true
+    },
   },
 
   plugins: [
