@@ -7,6 +7,7 @@ import path from 'path';
 // Import webpack plugins
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractCssChunks from 'extract-css-chunks-webpack-plugin';
+import StyleLintPlugin from 'stylelint-webpack-plugin';
 
 // Import package.json
 import PKG from './package';
@@ -110,5 +111,6 @@ export default {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new StyleLintPlugin(),
   ],
 };
