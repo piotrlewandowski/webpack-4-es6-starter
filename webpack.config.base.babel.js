@@ -6,9 +6,12 @@ import path from 'path';
 
 // Import webpack plugins
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractCssChunks from 'extract-css-chunks-webpack-plugin';
 
 // Import package.json
 import PKG from './package';
+
+const DEVELOPMENT = process.env.NODE_ENV === 'development' ? true : false;
 
 export default {
   // The base directory for resolving `entry` (must be absolute path)
@@ -39,6 +42,22 @@ export default {
         use: {
           loader: 'babel-loader',
         },
+      },
+
+      // Process Sass/SCSS files
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: ExtractCssChunks.loader,
+            options: {
+              hmr: DEVELOPMENT,
+            },
+          },
+          'css-loader?sourceMap',
+          'postcss-loader?sourceMap',
+          'sass-loader?sourceMap'
+        ],
       },
     ],
   },
@@ -72,6 +91,10 @@ export default {
         minifyCSS: true,
         minifyURLs: true,
       },
+    }),
+    new ExtractCssChunks({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
 };

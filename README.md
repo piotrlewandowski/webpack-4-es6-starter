@@ -7,6 +7,8 @@ Simple Webpack 4 ES6 Starter. It contains:
 - [x] [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement)
 - [x] Production config
 - [x] Automatic HTML generation
+- [x] SASS and PostCSS support
+- [x] Separate CSS stylesheets generation
 
 ## Prerequisites
 
