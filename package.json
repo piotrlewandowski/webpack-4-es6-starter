@@ -1,6 +1,6 @@
 {
   "name": "webpack-4-es6-starter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Simple Webpack 4 ES6 Starter",
   "main": "src/index.js",
   "scripts": {
