@@ -1,7 +1,7 @@
 {
   "name": "webpack-4-es6-starter",
   "version": "1.0.0",
-  "description": "Simple Webpack 4 ES6 Starter",
+  "description": "Webpack 4 ES6 Starter",
   "main": "src/index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -50,6 +50,7 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-notifier": "^1.8.0"
   }
 }
