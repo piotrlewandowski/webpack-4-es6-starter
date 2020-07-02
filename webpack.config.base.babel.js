@@ -5,6 +5,7 @@ import webpack from 'webpack';
 import path from 'path';
 
 // Import webpack plugins
+import WebpackNotifierPlugin from 'webpack-notifier';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractCssChunks from 'extract-css-chunks-webpack-plugin';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
@@ -80,6 +81,11 @@ export default {
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new WebpackNotifierPlugin({
+      title: PKG.description,
+      message: 'Compilation done!',
+      alwaysNotify: true,
+    }),
     new HtmlWebpackPlugin({
       template: require('html-webpack-template'),
       inject: false,

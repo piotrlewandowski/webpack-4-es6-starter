@@ -1,7 +1,7 @@
 # Webpack 4 ES6 Starter
 
 Simple Webpack 4 ES6 Starter. It contains:
-- [x] Latest Webpack 4 (v4.41.5) and Webpack Dev Server (v3.10.1) with Scope Hoisting enabled
+- [x] Latest Webpack 4 (v4.43.0) and Webpack Dev Server (v3.11.0) with Scope Hoisting enabled
 - [x] Babel 7
 - [x] ECMAScript 6+ support
 - [x] [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement)
